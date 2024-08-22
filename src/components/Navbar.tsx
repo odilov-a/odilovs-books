@@ -1,5 +1,4 @@
-import { Button, Container, Nav, NavDropdown, Navbar as NavbarBs } from "react-bootstrap";
-import { NavLink } from "react-router-dom";
+import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 function Navbar() {
@@ -8,18 +7,7 @@ function Navbar() {
     <NavbarBs sticky="top" className="bg-white shadow-sm mb-3">
       <Container>
         <Nav className="me-auto">
-          <Nav.Link to="/" as={NavLink}>
-            Home
-          </Nav.Link>
-          <Nav.Link to="/store" as={NavLink}>
-            Store
-          </Nav.Link>
-          <Nav.Link to="/about" as={NavLink}>
-            About
-          </Nav.Link>
-          <NavDropdown title="Change language" id="basic-nav-dropdown" className="justify-content-end">
-            <NavDropdown.Item href="">Russian</NavDropdown.Item>
-          </NavDropdown>
+          <h1 className="h3">Odilov's books</h1>
         </Nav>
         {cartQuantity > 0 && (
           <Button
