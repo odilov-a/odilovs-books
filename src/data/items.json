@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "name": "BMW",
+    "price": 566.90,
+    "imgUrl": "https://www.carscoops.com/wp-content/uploads/2018/12/3bb52198-bmw-m4-daytona-violet--1024x555.jpg"
+  },
+  {
+    "id": 2,
+    "name": "MERCEDES AMG",
+    "price": 566.90,
+    "imgUrl": "https://www.motortrend.com/uploads/2022/02/2021-Mercedes-Benz-AMG-GT-Coupe-PVOTY22-53.jpg?fit=around%7C875:492"
+  },
+  {
+    "id": 3,
+    "name": "LAMBORGHINI",
+    "price": 566.90,
+    "imgUrl": "https://www.best-selling-cars.com/wp-content/uploads/2021/01/LamborghiniHuraca%CC%81nSTO01-1536x863.jpg.webp"
+  },
+  {
+    "id": 4,
+    "name": "MCLAREN",
+    "price": 566.90,
+    "imgUrl": "https://picstatio.com/large/97e562/mclaren-570s-spider-2018-car-front-view-4k.jpg"
+  },
+  {
+    "id": 5,
+    "name": "PORSCHE",
+    "price": 566.90,
+    "imgUrl": "https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/pnr/2021/Products/718-Cayman-GT4-RS/769_003_highres.jpeg/jcr:content/769_003_highres.jpeg"
+  },
+  {
+    "id": 6,
+    "name": "BMW",
+    "price": 566.90,
+    "imgUrl": "https://www.carscoops.com/wp-content/uploads/2018/12/3bb52198-bmw-m4-daytona-violet--1024x555.jpg"
+  },
+  {
+    "id": 7,
+    "name": "MERCEDES AMG",
+    "price": 566.90,
+    "imgUrl": "https://www.motortrend.com/uploads/2022/02/2021-Mercedes-Benz-AMG-GT-Coupe-PVOTY22-53.jpg?fit=around%7C875:492"
+  },
+  {
+    "id": 8,
+    "name": "LAMBORGHINI",
+    "price": 566.90,
+    "imgUrl": "https://www.best-selling-cars.com/wp-content/uploads/2021/01/LamborghiniHuraca%CC%81nSTO01-1536x863.jpg.webp"
+  },
+  {
+    "id": 9,
+    "name": "MCLAREN",
+    "price": 566.90,
+    "imgUrl": "https://picstatio.com/large/97e562/mclaren-570s-spider-2018-car-front-view-4k.jpg"
+  },
+  {
+    "id": 10,
+    "name": "PORSCHE",
+    "price": 566.90,
+    "imgUrl": "https://newsroom.porsche.com/.imaging/mte/porsche-templating-theme/image_1290x726/dam/pnr/2021/Products/718-Cayman-GT4-RS/769_003_highres.jpeg/jcr:content/769_003_highres.jpeg"
+  },
+  {
+    "id": 11,
+    "name": "BMW",
+    "price": 566.90,
+    "imgUrl": "https://www.carscoops.com/wp-content/uploads/2018/12/3bb52198-bmw-m4-daytona-violet--1024x555.jpg"
+  },
+  {
+    "id": 12,
+    "name": "MERCEDES AMG",
+    "price": 566.90,
+    "imgUrl": "https://www.motortrend.com/uploads/2022/02/2021-Mercedes-Benz-AMG-GT-Coupe-PVOTY22-53.jpg?fit=around%7C875:492"
+  }
+]
