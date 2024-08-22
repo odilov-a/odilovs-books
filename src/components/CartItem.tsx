@@ -14,7 +14,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
   if (item == null) return null;
 
   return (
-    <Stack direction="horizontal" gap={2} className="d-flex align-items-center">
+    <Stack direction="horizontal" className="d-flex align-items-center">
       <img
         alt="img"
         src={item.imgUrl}
@@ -35,6 +35,7 @@ export function CartItem({ id, quantity }: CartItemProps) {
       </div>
       <div>{formatCurrency(item.price * quantity)}</div>
       <Button
+        aria-label="Increase quantity"
         variant="outline-danger"
         size="sm"
         onClick={() => removeFromCart(item.id)}

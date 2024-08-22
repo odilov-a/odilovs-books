@@ -14,5 +14,21 @@
     "description": "Amerikalik noshir Tomas Nayloning iltimosiga binoan o'sha zamon qizlariga atab yozilgan “Kichkina xonimlar” Luiza Mey Olkottning eng mashhur, jahon adabiyoti ro‘yxatlarida o‘rni-yu eʼtirofini topgan romanlaridan... To‘rt opa-singil - Meg, Jo, Bes va Emining biri boshqasinikiga o‘xshamas feʼli, sarguzashtlari, pokiza orzulari, betakrorligi bilan ajralib turadi.Ushbu kitob qisman biografik asar hamdir. Muallif o‘z opa-singillarini prototip qilib tanlaydi va “Jo aslida menman” deya kundaliklarida qayd etadi. Yozuvchi nohaqlikka isyon, qiz bolaning oila, ro‘zg‘or tashvishlariga ko‘milib emas, jamiyatdagu manfaatli ishlarga ham hissa qo‘sha olishiga diqqatni qaratadi.",
     "price": 100.000,
     "imgUrl": "https://images.uzum.uz/cfdnvc2vtie1t76740jg/original.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Kichkina xonimlar",
+    "author": "Luiza Mey Olkott",
+    "description": "Amerikalik noshir Tomas Nayloning iltimosiga binoan o'sha zamon qizlariga atab yozilgan “Kichkina xonimlar” Luiza Mey Olkottning eng mashhur, jahon adabiyoti ro‘yxatlarida o‘rni-yu eʼtirofini topgan romanlaridan... To‘rt opa-singil - Meg, Jo, Bes va Emining biri boshqasinikiga o‘xshamas feʼli, sarguzashtlari, pokiza orzulari, betakrorligi bilan ajralib turadi.Ushbu kitob qisman biografik asar hamdir. Muallif o‘z opa-singillarini prototip qilib tanlaydi va “Jo aslida menman” deya kundaliklarida qayd etadi. Yozuvchi nohaqlikka isyon, qiz bolaning oila, ro‘zg‘or tashvishlariga ko‘milib emas, jamiyatdagu manfaatli ishlarga ham hissa qo‘sha olishiga diqqatni qaratadi.",
+    "price": 100.000,
+    "imgUrl": "https://images.uzum.uz/cfdnvc2vtie1t76740jg/original.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Kichkina xonimlar",
+    "author": "Luiza Mey Olkott",
+    "description": "Amerikalik noshir Tomas Nayloning iltimosiga binoan o'sha zamon qizlariga atab yozilgan “Kichkina xonimlar” Luiza Mey Olkottning eng mashhur, jahon adabiyoti ro‘yxatlarida o‘rni-yu eʼtirofini topgan romanlaridan... To‘rt opa-singil - Meg, Jo, Bes va Emining biri boshqasinikiga o‘xshamas feʼli, sarguzashtlari, pokiza orzulari, betakrorligi bilan ajralib turadi.Ushbu kitob qisman biografik asar hamdir. Muallif o‘z opa-singillarini prototip qilib tanlaydi va “Jo aslida menman” deya kundaliklarida qayd etadi. Yozuvchi nohaqlikka isyon, qiz bolaning oila, ro‘zg‘or tashvishlariga ko‘milib emas, jamiyatdagu manfaatli ishlarga ham hissa qo‘sha olishiga diqqatni qaratadi.",
+    "price": 100.000,
+    "imgUrl": "https://images.uzum.uz/cfdnvc2vtie1t76740jg/original.jpg"
   }
 ]

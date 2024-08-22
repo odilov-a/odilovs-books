@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap";
 function Store() {
   return (
     <>
-      <Row md={2} xs={1} lg={3} className="g-4">
+      <Row className="g-4">
         {storeItems.map((item) => (
           <Col key={item.id}>
             <StoreItem {...item} />
