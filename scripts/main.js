@@ -81,25 +81,24 @@ function addItemToCart(title, price, productImg) {
       return;
     }
   }
-}
-
-var cartBoxContents = `
+  var cartBoxContents = `
     <img src="${productImg}" class="cart-img">
-         <div class="detail-box">
-            <div class="cart-product-title">${title}</div>
-            <div class="cart-price">${price}</div>
-            <input type="number" class="cart-quantity" value="1">
-        </div>
+    <div class="detail-box">
+        <div class="cart-product-title">${title}</div>
+        <div class="cart-price">${price}</div>
+        <input type="number" class="cart-quantity" value="1">
+    </div>
     <i class="bx bxs-trash-alt cart-remove"></i>
-`;
-cartShopBox.innerText = cartBoxContents;
-cartItems.append(cartShopBox);
-cartShopBox
-  .getElementsByClassName("cart-remove")[0]
-  .addEventListener("click", removeCartItem);
-cartShopBox
-  .getElementsByClassName("cart-quantity")[0]
-  .addEventListener("change", quantityChanged);
+  `;
+  cartShopBox.innerHTML = cartBoxContents;
+  cartItems.append(cartShopBox);
+  cartShopBox
+    .getElementsByClassName("cart-remove")[0]
+    .addEventListener("click", removeCartItem);
+  cartShopBox
+    .getElementsByClassName("cart-quantity")[0]
+    .addEventListener("change", quantityChanged);
+}
 
 function updateTotal() {
   var cartContent = document.getElementsByClassName("cart-content")[0];
