@@ -115,3 +115,28 @@ function updateTotal() {
   total = Math.round(total * 100) / 100;
   document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("./data/books.json")
+    .then((response) => response.json())
+    .then((data) => {
+      let bookList = document.getElementById("book-list");
+      data.forEach((book) => {
+        let bookBox = document.createElement("div");
+        bookBox.classList.add("product-box");
+        bookBox.innerHTML = `
+          <img src="${book.image}" class="product-img">
+          <h2 class="product-title">${book.title}</h2>
+          <span class="price">$${book.price}</span>
+          <i class="bx bx-shopping-bag add-cart"></i>
+        `;
+        bookList.appendChild(bookBox);
+        bookBox.querySelector(".add-cart").addEventListener("click", () => {
+          addItemToCart(book.title, `$${book.price}`, book.image);
+        });
+      });
+    })
+    .catch((error) => {
+      console.error({ error });
+    });
+});
