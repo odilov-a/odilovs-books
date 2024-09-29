@@ -38,7 +38,7 @@ function ready() {
 }
 
 function buyButtonClicked() {
-  alert("Thank you for your purchase");
+alert("Sizning buyurtmangiz qabul qilindi! Tez orada siz bilan bog'lanamiz!");
   var cartContent = document.getElementsByClassName("cart-content")[0];
   while (cartContent.hasChildNodes()) {
     cartContent.removeChild(cartContent.firstChild);
@@ -78,7 +78,10 @@ function addItemToCart(title, price, productImg) {
       cartItemNames[i].innerText.trim().toLowerCase() ===
       title.trim().toLowerCase()
     ) {
-      alert("Bu narsa allaqachon savatga qo'shilgan!");
+      Swal.fire({
+        title: "Bu kitob qo'shilgan!",
+        icon: "info",
+      });
       return;
     }
   }
