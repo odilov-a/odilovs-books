@@ -1,12 +1,27 @@
 [
     {
-        "title": "The Great Gatsby 1",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1024px-Image_created_with_a_mobile_phone.png",
-        "price": "9.99"
+        "title": "Molxona",
+        "image": "https://assets.asaxiy.uz/product/items/desktop/efe937780e95574250dabe07151bdc2320240313160857895491UxuNTZfSK.jpg",
+        "price": "42.000"
     },
     {
-        "title": "The Great Gatsby",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1024px-Image_created_with_a_mobile_phone.png",
-        "price": "9.99"
+        "title": "Chol va dengiz",
+        "image": "https://assets.asaxiy.uz/product/items/desktop/00e77705db5b01bfc68dac5a9cf3adc72022112115393250185iLIw0N26uq.jpg.webp",
+        "price": "18.000"
+    },
+    {
+        "title": "Alkimyogar",
+        "image": "https://assets.asaxiy.uz/product/main_image/desktop/643fe883c811a.jpg.webp",
+        "price": "36.000"
+    },
+    {
+        "title": "Savdo san'ati. Biznes va hayotda maqsadlaringizga erishish yo'li",
+        "image": "https://telegra.ph/file/ecf5dba438be63ce9f0e3.jpg",
+        "price": "128.000"
+    },
+    {
+        "title": "Million dollarlik xatolar",
+        "image": "https://inbaza.uz/backend/web/uploads/product/280853007.jpg",
+        "price": "50.000"
     }
 ]
