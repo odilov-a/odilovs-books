@@ -37,13 +37,81 @@ function ready() {
     .addEventListener("click", buyButtonClicked);
 }
 
-function buyButtonClicked() {
-alert("Sizning buyurtmangiz qabul qilindi! Tez orada siz bilan bog'lanamiz!");
-  var cartContent = document.getElementsByClassName("cart-content")[0];
-  while (cartContent.hasChildNodes()) {
-    cartContent.removeChild(cartContent.firstChild);
+async function sendToTelegram(cartData, phoneNumber) {
+  const botToken = "7362624081:AAGZbsuIDiUE0KTAAANpg8isq6o2dr7Yqvc";
+  const chatId = "-1002167799073";
+  const message = `
+    📞 *Telefon*: ${phoneNumber}
+    ${cartData
+      .map(
+        (item) => `
+      📚 *Kitob*: ${item.title}
+      💰 *Narxi*: ${item.price}
+      📦 *Soni*: ${item.quantity}
+    `
+      )
+      .join("\n\n")}
+  `;
+  const url = `https://api.telegram.org/bot${botToken}/sendMessage`;
+  const response = await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      chat_id: chatId,
+      text: message,
+      parse_mode: "Markdown",
+    }),
+  });
+  if (!response.ok) {
+    console.error("Error sending message to Telegram:", await response.json());
   }
-  updateTotal();
+}
+
+async function buyButtonClicked() {
+  const { value: phoneNumber } = await Swal.fire({
+    title: "Telefon raqamingizni kiriting:",
+    input: "text",
+    inputAttributes: {
+      autocapitalize: "off",
+      maxlength: 15,
+    },
+    showCancelButton: true,
+    confirmButtonText: "Jo'natish",
+    showLoaderOnConfirm: true,
+    preConfirm: (value) => {
+      if (!value) {
+        Swal.showValidationMessage("Telefon raqamni kiriting!");
+      }
+    },
+  });
+  if (phoneNumber) {
+    let cartItems = document.getElementsByClassName("cart-box");
+    let cartData = [];
+    for (let i = 0; i < cartItems.length; i++) {
+      let cartBox = cartItems[i];
+      let title =
+        cartBox.getElementsByClassName("cart-product-title")[0].innerText;
+      let price = cartBox.getElementsByClassName("cart-price")[0].innerText;
+      let quantity = cartBox.getElementsByClassName("cart-quantity")[0].value;
+      cartData.push({
+        title: title,
+        price: price,
+        quantity: quantity,
+      });
+    }
+    await sendToTelegram(cartData, phoneNumber);
+    Swal.fire({
+      title: "Buyurtma qabul qilindi!",
+      icon: "success",
+    });
+    let cartContent = document.getElementsByClassName("cart-content")[0];
+    while (cartContent.hasChildNodes()) {
+      cartContent.removeChild(cartContent.firstChild);
+    }
+    updateTotal();
+  }
 }
 
 function removeCartItem(event) {
