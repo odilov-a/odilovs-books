@@ -71,22 +71,25 @@ function addCartClicked(event) {
 }
 
 function addItemToCart(title, price, productImg) {
-  var cartShopBox = document.createElement("div");
-  cartShopBox.classList.add("cart-box");
   var cartItems = document.getElementsByClassName("cart-content")[0];
   var cartItemNames = cartItems.getElementsByClassName("cart-product-title");
   for (var i = 0; i < cartItemNames.length; i++) {
-    if (cartItemNames[i].innerText == title) {
-      alert("This item is already added to the cart");
+    if (
+      cartItemNames[i].innerText.trim().toLowerCase() ===
+      title.trim().toLowerCase()
+    ) {
+      alert("Bu narsa allaqachon savatga qo'shilgan!");
       return;
     }
   }
+  var cartShopBox = document.createElement("div");
+  cartShopBox.classList.add("cart-box");
   var cartBoxContents = `
     <img src="${productImg}" class="cart-img">
     <div class="detail-box">
-        <div class="cart-product-title">${title}</div>
-        <div class="cart-price">${price}</div>
-        <input type="number" class="cart-quantity" value="1">
+      <div class="cart-product-title">${title}</div>
+      <div class="cart-price">${price}</div>
+      <input type="number" class="cart-quantity" value="1">
     </div>
     <i class="bx bxs-trash-alt cart-remove"></i>
   `;
@@ -98,6 +101,7 @@ function addItemToCart(title, price, productImg) {
   cartShopBox
     .getElementsByClassName("cart-quantity")[0]
     .addEventListener("change", quantityChanged);
+  updateTotal();
 }
 
 function updateTotal() {
@@ -108,12 +112,15 @@ function updateTotal() {
     var cartBox = cartBoxes[i];
     var priceElement = cartBox.getElementsByClassName("cart-price")[0];
     var quantityElement = cartBox.getElementsByClassName("cart-quantity")[0];
-    var price = parseFloat(priceElement.innerText.replace("$", ""));
+    var price = parseFloat(
+      priceElement.innerText.replace("UZS", "").replace(",", "")
+    );
     var quantity = quantityElement.value;
     total = total + price * quantity;
   }
   total = Math.round(total * 100) / 100;
-  document.getElementsByClassName("total-price")[0].innerText = "$" + total;
+  document.getElementsByClassName("total-price")[0].innerText =
+    "UZS" + " " + total;
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -127,12 +134,12 @@ document.addEventListener("DOMContentLoaded", () => {
         bookBox.innerHTML = `
           <img src="${book.image}" class="product-img">
           <h2 class="product-title">${book.title}</h2>
-          <span class="price">$${book.price}</span>
+          <span class="price">UZS ${book.price}</span>
           <i class="bx bx-shopping-bag add-cart"></i>
         `;
         bookList.appendChild(bookBox);
         bookBox.querySelector(".add-cart").addEventListener("click", () => {
-          addItemToCart(book.title, `$${book.price}`, book.image);
+          addItemToCart(book.title, `UZS ${book.price}`, book.image);
         });
       });
     })
